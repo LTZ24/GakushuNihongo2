@@ -210,6 +210,9 @@ async def get_kanji_deck(
     if not deck:
         raise HTTPException(status_code=404, detail="Belum ada kanji untuk cakupan ini")
     return deck
+
+
+@router.get("/quiz/questions")
 async def get_quiz_questions(
     quiz_type: str = Query(...),
     scope_type: str = Query(...),
@@ -222,7 +225,7 @@ async def get_quiz_questions(
     if not contents:
         raise HTTPException(
             status_code=404,
-            detail="Materi untuk cakupan ini belum tersedia — saat ini baru Bab 1 yang berisi materi",
+            detail="Materi untuk cakupan ini belum tersedia",
         )
     if quiz_type == "bunpo":
         pool = _bunpo_questions(contents)
