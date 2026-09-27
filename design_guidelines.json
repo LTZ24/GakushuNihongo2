@@ -1,0 +1,216 @@
+{
+  "theme": "light_first_with_dark_toggle",
+  "archetype": "ORGANIC & EARTHY fused with MODERN JAPANESE EDITORIAL (Wabi-sabi Clean + Crimson Kinetic)",
+  "emotional_tone": "Inviting, motivating, focused, clear Indonesian pedagogical warmth with genuine Japanese aesthetic craft (washi off-white, vermilion torii red, deep sumi ink, soft matcha green accents)",
+  "typography": {
+    "font_family_heading": "Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif",
+    "font_family_body": "Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans JP', 'Hiragino Sans', sans-serif",
+    "font_family_japanese": "'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif",
+    "font_family_mono": "Geist Mono, JetBrains Mono, monospace",
+    "scale_px": {
+      "display": 52,
+      "h1": 40,
+      "h2": 30,
+      "h3": 22,
+      "body": 16,
+      "caption": 14
+    },
+    "ruby_rules": {
+      "line_height": "leading-loose md:leading-[2.4rem]",
+      "ruby_annotation": "text-[0.68em] text-crimson-600 dark:text-crimson-400 font-medium tracking-normal",
+      "kanji_display": "font-japanese font-semibold text-sumi-900 dark:text-sumi-50"
+    }
+  },
+  "colors": {
+    "palette_notes": "Warm Washi Beige base (#FDFBF7), Deep Sumi Charcoal (#18181B) for ink legibility, Vermilion / Torii Crimson (#DC2626 / #BE123C) for kinetic focus/badges/active states, Matcha Slate (#059669) for success/Nihongo 1 mastery, Indigo Navy (#1E293B) for Nihongo 2 mastery.",
+    "accent": "#DC2626",
+    "on_accent": "#FFFFFF",
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#FDFBF7",
+        "on_bg": "#18181B",
+        "on_bg_muted": "#52525B",
+        "roles": {
+          "link": "#DC2626",
+          "error": "#B91C1C",
+          "success": "#15803D",
+          "warning": "#B45309",
+          "nihongo1_badge": "#047857",
+          "nihongo2_badge": "#1D4ED8"
+        }
+      },
+      {
+        "name": "page_dark",
+        "kind": "solid",
+        "bg": "#121214",
+        "on_bg": "#FAFAFA",
+        "on_bg_muted": "#A1A1AA",
+        "roles": {
+          "link": "#F87171",
+          "error": "#EF4444",
+          "success": "#34D399",
+          "warning": "#FBBF24"
+        }
+      },
+      {
+        "name": "panel",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#18181B",
+        "on_bg_muted": "#52525B",
+        "roles": {
+          "link": "#DC2626",
+          "error": "#B91C1C",
+          "success": "#15803D"
+        }
+      },
+      {
+        "name": "panel_dark",
+        "kind": "solid",
+        "bg": "#1C1C1F",
+        "on_bg": "#FAFAFA",
+        "on_bg_muted": "#A1A1AA",
+        "roles": {
+          "link": "#F87171",
+          "error": "#EF4444",
+          "success": "#34D399"
+        }
+      },
+      {
+        "name": "hero",
+        "kind": "image",
+        "contrast_against": "#18181B",
+        "guarantee": "scrim: linear-gradient(180deg, rgba(253,251,247,0.95) 0%, rgba(253,251,247,0.85) 60%, rgba(253,251,247,1) 100%)",
+        "on_bg": "#18181B",
+        "on_bg_muted": "#52525B",
+        "roles": {
+          "link": "#DC2626",
+          "error": "#B91C1C",
+          "success": "#15803D"
+        }
+      },
+      {
+        "name": "inverse",
+        "kind": "solid",
+        "bg": "#18181B",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#D4D4D8",
+        "roles": {
+          "link": "#FCA5A5",
+          "error": "#F87171",
+          "success": "#4ADE80"
+        }
+      },
+      {
+        "name": "kanji_card_bg",
+        "kind": "solid",
+        "bg": "#FFFBEB",
+        "on_bg": "#451A03",
+        "on_bg_muted": "#78350F"
+      },
+      {
+        "name": "bunpo_formula_box",
+        "kind": "solid",
+        "bg": "#FEF2F2",
+        "on_bg": "#7F1D1D",
+        "on_bg_muted": "#991B1B"
+      },
+      {
+        "name": "duolingo_tile_default",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#18181B",
+        "on_bg_muted": "#71717A"
+      },
+      {
+        "name": "duolingo_tile_selected",
+        "kind": "solid",
+        "bg": "#FEE2E2",
+        "on_bg": "#991B1B",
+        "on_bg_muted": "#B91C1C"
+      }
+    ]
+  },
+  "entry_surfaces": {
+    "/": "split hero — brand tagline + learning streak stats left, quick entry into Bab Materi & Interactive Quiz right",
+    "/bab": "bento grid — curriculum selector (MNN 1: Bab 1-25 / MNN 2: Bab 26-50) with active Bab 1 card and locked Bab 2-50 badges",
+    "/bab/:babId": "4-tab Japanese study sanctum — Bunpo (grammar formula), Kotoba (vocabulary with furigana + examples), Kanji (strokes, Onyomi/Kunyomi, Jukugo), Kaiwa (interactive script dialogue with audio/furigana)",
+    "/quiz": "quiz setup console — scope selection (Bab 1 / MNN 1 / MNN 2 / Custom) and 5 quiz modes (Bunpo MCQ, Kanji Reader, Kotoba ID-JP, Mixed, Duolingo Word Reordering)",
+    "/quiz/runner": "distraction-free focus stage — top animated progress bar, interactive ruby question/word blocks, instant pedagogical explanation drawer with particle highlighter",
+    "/quiz/results": "achievement breakdown — circular score gauge, review incorrect answers, streak multiplier, and 'Ulangi / Kembali ke Bab' CTAs",
+    "/stats": "learner dashboard — JLPT mastery curve, total quiz sessions, Kotoba retained, and historical logs stored in MongoDB"
+  },
+  "media": {
+    "image_urls": [
+      {
+        "category": "hero_culture_banner",
+        "description": "Mount Fuji rising with red Pagoda temple - Japanese cultural landmark for Hero banner and empty states",
+        "url": "https://images.unsplash.com/photo-1725162949746-99574c13007c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwzfHxqYXBhbmVzZSUyMHRvcmlpJTIwZ2F0ZSUyMG1vdW50JTIwZnVqaXxlbnwwfHx8fDE3OTA1MDM5ODd8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "sakura_tokyo_header",
+        "description": "Pagoda with pink cherry blossoms for study ambient cards and curriculum headers",
+        "url": "https://images.unsplash.com/photo-1524572744373-42e36a30d1f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwzfHx0b2t5byUyMHBhZ29kYSUyMGNoZXJyeSUyMGJsb3Nzb218ZW58MHx8fHwxNzkwNTAzOTg3fDA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "kanji_calligraphy_art",
+        "description": "Kanji script and ink calligraphy art on washi paper for Kanji lesson tab and culture motivation",
+        "url": "https://images.unsplash.com/photo-1545038522-9bb451739ab9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwzfHxqYXBhbmVzZSUyMGNhbGxpZ3JhcGh5JTIwaW5rJTIwYnJ1c2h8ZW58MHx8fHwxNzkwNTAzOTg3fDA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "torii_mountain_landscape",
+        "description": "Red torii gate framing majestic mountain landscape for Minna no Nihongo Book 1 vs 2 cover illustration",
+        "url": "https://images.unsplash.com/photo-1627052862140-069bd225b3b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwyfHxqYXBhbmVzZSUyMHRvcmlpJTIwZ2F0ZSUyMG1vdW50JTIwZnVqaXxlbnwwfHx8fDE3OTA1MDM5ODd8MA&ixlib=rb-4.1.0&q=85"
+      }
+    ]
+  },
+  "visual_enhancers": {
+    "furigana_ruby_component": "Custom <FuriganaText text='...' /> parser supporting standard notation e.g. [私|わたし] or direct <ruby>Kanji<rt>furigana</rt></ruby> with custom CSS ensuring 1.8rem minimum line-height and crisp crimson/sumi contrast.",
+    "duolingo_reorder_ui": "Tactile bouncy word block tokens with 3D bottom border (border-b-4 border-zinc-300 active:border-b-0 active:translate-y-1) for word rearrangement quiz.",
+    "interactive_grammar_cards": "Grammar formula highlight with clickable particle chips (は, が, を, に, で, も, から, まで) revealing grammatical function tooltips.",
+    "tactile_audio_speech": "Web Speech Synthesis API for Japanese (ja-JP) audio pronunciation on Kotoba & Kaiwa lines.",
+    "washi_paper_texture": "Subtle 1px border with soft inner shadow and warm cream backdrop."
+  },
+  "layouts_and_grids": {
+    "dashboard_grid": "Tetris-style bento: Hero motivation card (col-span-full lg:col-span-8), Quick Quiz CTA + Streak Card (col-span-full lg:col-span-4), MNN 1 & 2 Book Progress (2 columns), Recent Quiz Activity List.",
+    "bab_detail_layout": "Header sticky breadcrumb with Bab 1 badge, Title in Japanese & Indonesian, Tab Bar (Bunpo, Kotoba, Kanji, Kaiwa) with instant search filter, and sticky bottom quiz CTA.",
+    "quiz_runner_layout": "Clean centered single-column mobile-first layout (max-w-2xl mx-auto) with animated progress bar at top, question prompt with ruby characters, option cards / Duolingo word bank, and slide-up interactive feedback bottom sheet."
+  },
+  "motion": {
+    "transitions": "transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, border-color 0.15s ease, opacity 0.2s ease",
+    "word_chip_spring": "motion.button with hover lift y: -2, tap y: 2",
+    "feedback_sheet_spring": "motion.div entrance from bottom y: 40 to 0 with spring stiffness 300 damping 25",
+    "tab_indicator": "layoutId='activeTabPill' with smooth sliding indicator"
+  },
+  "accessibility": {
+    "contrast_check": "All text elements verified against APCA / WCAG AA 4.5:1 ratio (Sumi #18181B on Washi #FDFBF7 = 16.2:1 contrast; Crimson #DC2626 on White = 4.8:1; Muted #52525B on Washi = 5.2:1).",
+    "screen_reader_ruby": "<ruby aria-label='Kanji reading'> tag structure with fallback parentheses text for legacy screen readers.",
+    "keyboard_navigation": "Full arrow key navigation and 1-4 number keys for MCQ quiz selection; Enter to submit/continue."
+  },
+  "component_paths": {
+    "app_shell": "frontend/src/App.tsx",
+    "index_css": "frontend/src/index.css",
+    "navigation_header": "frontend/src/components/layout/Navbar.tsx",
+    "furigana_renderer": "frontend/src/components/japanese/Furigana.tsx",
+    "kanji_card": "frontend/src/components/japanese/KanjiCard.tsx",
+    "bunpo_card": "frontend/src/components/japanese/BunpoCard.tsx",
+    "kotoba_table": "frontend/src/components/japanese/KotobaList.tsx",
+    "kaiwa_player": "frontend/src/components/japanese/KaiwaSection.tsx",
+    "duolingo_word_reorder": "frontend/src/components/quiz/DuolingoReorder.tsx",
+    "quiz_feedback_drawer": "frontend/src/components/quiz/QuizFeedback.tsx",
+    "stats_chart": "frontend/src/components/stats/StatsOverview.tsx"
+  },
+  "instructions_to_main_agent": [
+    "1. Read this design_guidelines.json carefully before coding.",
+    "2. Database & API: Backend is FastAPI with MongoDB. Bab 1 data (Bunpo, Kotoba, Kanji, Kaiwa) MUST be seeded in MongoDB and served via /api/bab/1. Bab 2-50 should be returned in metadata with is_locked: true and badge 'Segera'.",
+    "3. Quiz System: 5 quiz modes must be fully functional: 1) Bunpo MCQ with particle options, 2) Kanji reading guessing, 3) Kotoba ID<->JP translation, 4) Campuran (mixed), 5) Duolingo-style click-to-reorder word blocks into a grammatical Japanese sentence.",
+    "4. Explanations in Quiz: When answering Bunpo, display an interactive breakdown (highlighting the formula e.g. '[Kata Benda] + は + [Kata Benda] + です', key particle meaning, and common trap explanation).",
+    "5. Furigana ruby annotations: Ensure all Japanese sentences in Bunpo, Kotoba, Kanji, and Kaiwa use HTML <ruby> <rt> tag or custom parser so furigana is placed cleanly ABOVE the Kanji without colliding with adjacent lines.",
+    "6. Quiz results & Statistics: After quiz completion, calculate score, accuracy, time spent, and save the session to MongoDB via POST /api/quiz/sessions. Display total quizzes taken, average score, and streak on the Dashboard.",
+    "7. Degrade gracefully: Never crash or show full-screen blank page if backend is disconnected; show polished skeletons and fallback offline preview for Bab 1.",
+    "8. All interactive elements (buttons, tabs, quiz choices, word blocks, navigation links) MUST have clear `data-testid` attributes (e.g. `data-testid='tab-bunpo'`, `data-testid='quiz-option-0'`, `data-testid='duolingo-word-chip'`).",
+    "9. Retain mobile-first layout with smooth tab transitions and clean desktop dual-column layouts."
+  ]
+}
