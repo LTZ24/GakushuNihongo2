@@ -27,10 +27,33 @@ from routers import quiz as quiz_routes
 
 
 # Startup runs before the yield, shutdown after it. Add your own setup/teardown here.
+async def ensure_seeded() -> None:
+    """Seed MongoDB automatically when the chapters collection is empty/incomplete.
+
+    The seed script is idempotent: it replaces chapters by number and upserts them,
+    so running it again does not create duplicate chapter documents. We only invoke
+    it when fewer than 50 chapter documents exist, which avoids re-seeding on every
+    Render restart once the database is populated.
+    """
+    if os.environ.get("AUTO_SEED_DATABASE", "true").strip().lower() not in {"1", "true", "yes", "on"}:
+        logger.info("MongoDB auto-seed disabled (AUTO_SEED_DATABASE=false)")
+        return
+
+    total = await db.chapters.count_documents({})
+    if total >= 50:
+        logger.info("MongoDB seed check: %s chapter documents already present; skipping seed", total)
+        return
+
+    logger.info("MongoDB seed check: only %s chapter documents present; running seed.py", total)
+    from seed import main as seed_main
+    await seed_main()
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     app.state.index_task = asyncio.create_task(ensure_indexes())  # background: a big index build must not block boot
     await init_sql_schema()  # MySQL: akun lokal + progress per user
+    await ensure_seeded()  # MongoDB: populate chapter content automatically on first deployment
     yield
     client.close()
 
