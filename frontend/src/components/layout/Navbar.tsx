@@ -53,9 +53,12 @@ export default function Navbar() {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
           <Link to="/" data-testid="nav-logo" className="flex items-center gap-2">
             <span className="font-jp text-2xl font-bold tracking-tight text-primary">
-              がくしゅう
+              学習
             </span>
-            <span className="rounded-lg bg-primary px-1.5 py-0.5 text-sm font-bold text-primary-foreground">
+            <span
+              aria-label="Plus"
+              className="flex h-7 w-7 items-center justify-center rounded-full bg-red-600 text-base font-bold leading-none text-white shadow-sm"
+            >
               +
             </span>
           </Link>
