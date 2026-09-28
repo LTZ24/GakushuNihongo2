@@ -46,8 +46,9 @@ export default function Home() {
             Belajar Bahasa Jepang, <span className="font-jp text-crimson-400">いっしょに</span>!
           </h1>
           <p className="mt-3 text-sm leading-relaxed text-white/85 md:text-base">
-            Kurikulum 50 bab dengan Bunpo, Kotoba, Kanji, dan Kaiwa ber-furigana — plus lima jenis
-            quiz interaktif. Semua penjelasan dalam Bahasa Indonesia.
+            Satu tempat untuk mempelajari Bahasa Jepang Bab 1–50. Materi mencakup tata bahasa (Bunpō),
+            kosakata (Kotoba), Kanji, dan percakapan (Kaiwa), dilengkapi contoh penggunaan,
+            penjelasan Bahasa Indonesia, dan latihan kuis untuk setiap materi.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link to="/bab/1" data-testid="hero-cta-bab" className={buttonVariants()}>
@@ -95,8 +96,8 @@ export default function Home() {
           </div>
           <h2 className="mt-4 text-xl font-bold">Menu Quiz</h2>
           <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-            Lima jenis latihan interaktif — Bunpo, Kanji, Kotoba, Campuran, dan Susun Kata gaya
-            Duolingo. Pilih cakupan bab atau buku.
+            Lima jenis latihan interaktif — Bunpo, Kanji, Kotoba, Campuran, dan Susun Kata.
+            Pilih cakupan bab atau buku.
           </p>
           <p className="mt-3 text-xs font-semibold text-crimson-700 dark:text-crimson-300">
             Umpan balik instan · Hasil tersimpan sebagai statistik

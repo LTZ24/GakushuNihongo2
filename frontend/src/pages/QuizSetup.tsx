@@ -14,7 +14,7 @@ const QUIZ_MODES: { type: QuizType; title: string; desc: string; icon: typeof No
   { type: "kanji", title: "Quiz Kanji", desc: "Tebak cara baca (furigana) atau arti dari kanji yang ditampilkan.", icon: Type },
   { type: "kotoba", title: "Quiz Kotoba", desc: "Tebak arti kosakata, dua arah: Jepang ke Indonesia dan sebaliknya.", icon: Languages },
   { type: "mix", title: "Quiz Campuran", desc: "Gabungan acak dari soal Bunpo, Kanji, dan Kotoba.", icon: Shuffle },
-  { type: "susun", title: "Susun Kata", desc: "Gaya Duolingo — susun blok kata menjadi kalimat utuh yang benar.", icon: Puzzle },
+  { type: "susun", title: "Susun Kata", desc: "Susun Blok Kata menjadi kalimat utuh yang benar.", icon: Puzzle },
 ];
 
 const BOOK_OPTIONS = [
